@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+
+import BotonCambiarData from "./components/BotonCambiarData";
+import Pagina1 from "./components/Pagina1";
+import Pagina2 from "./components/Pagina2";
+import DataProvider from "./context/DataContext";
+
+
 
 function App() {
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <DataProvider>
+    <div className="container">
+      <Pagina1  />
+      <Pagina2 />
+      <BotonCambiarData/>
     </div>
+    </DataProvider>
+    </>
   );
 }
 
